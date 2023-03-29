@@ -1,0 +1,148 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - okay, got it
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+# - intent: mood_unhappy
+#   examples: |
+#     - my day was horrible
+#     - I am sad
+#     - I don't feel very well
+#     - I am disappointed
+#     - super sad
+#     - I'm so sad
+#     - sad
+#     - very sad
+#     - unhappy
+#     - not good
+#     - not very good
+#     - extremly sad
+#     - so saad
+#     - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+
+# - intent: tell_me_more
+#   examples: | 
+#     - I didn't get that?
+#     - Can you explain more?
+#     - Please elaborate
+
+- intent: identity_theft_about
+  examples: |
+   - what is id theft?
+   - what is identity theft?
+   - define identity theft
+   - please explain identity theft
+
+- intent: identity_theft_type
+  examples: |
+    - what are the types of identity theft?
+    - what are its types?
+    - types of identity theft
+    - give me the 3 types of identity theft
+
+- intent: provide_feedback_answer
+  examples: |
+    - The module on identity theft could have been more descriptive
+    - could have been more descriptive
+    - needs to be more descriptive
+
+- intent: font_size_problem
+  examples: |
+    - Too small
+    - I am unable to see
+    - Too big
+    - How can I decrease the font?
+    - How can I increase the font?
+    - I need help changing the font
+    - font size
+    - can you help me change the font size?
+
+- intent: consequences_stolen_personal_information
+  examples: |
+    - What are the consequences when personal information is stolen?
+    - Can you tell me about potential consquences of personal information being stolen?
+    - what can be the outcome of personal information being stolen?
+    - how can stolen PII harm me?
+    - What are the consequences when PII is stolen?
+    - Can you tell me about potential consquences of PII being stolen?
+    - what can be the outcome of PII being stolen?
+    - how can stolen PII harm me?
+
+- intent: personal_identifiable_information
+  examples: |
+    - what is personal identifiable information?
+    - can you explain personal identifiable information?
+    - I did not understand personal identifiable information
+    - tell me about personal identifiable information again
+    - what is PII?
+    - can you explain PII?
+    - I did not understand PII
+    - tell me about PII again

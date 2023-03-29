@@ -1,0 +1,76 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  # - mood_unhappy
+  - bot_challenge
+  - identity_theft_type
+  - identity_theft_about
+  - provide_feedback_answer
+  - font_size_problem
+  - consequences_stolen_personal_information
+  - personal_identifiable_information
+
+responses:
+
+  # utter_cheer_up:
+  # - text: "Here is something to cheer you up:"
+  #   image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  # utter_happy:
+  # - text: "Great, carry on!"
+  
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_ask:
+    - text: "How can I help you today?"
+    - text: "What brings you here?"
+    
+  utter_ask_more:
+    - text: "Anything else?"
+    - text: "Can I help with anything else?"
+
+  utter_identity_theft_about:
+    - text: "Identity theft happens when someone steals your personal information to commit fraud. The identity thief may use your information to apply for credit, file taxes, or get medical services. These acts can damage your credit status and cost you time and money to restore your good name. "
+
+  utter_identity_theft_type:
+  - text: "The 3 types of identity type thefts are 1. financial identity theft, 2. tax-related identity theft, 3. medical identity theft"
+  
+  utter_get_feedback:
+    - text: "Would you like to give any feedback for the training module?"
+
+  utter_change_font_size:
+    - text: "To change the font size go to Settings > System settings > Font. From there, you can select the font you like and change the size of the font as per your liking."
+
+  utter_consequences_personal_information:
+    - text: "Stolen Personal Identifiable Information (PII) can harm the victim in multiple ways - 
+    1. Scammers can use victims’ personal identifiable information (PII) to fraudulently apply for loans and credit cards. This can not only result in financial losses, but also damage victims’ credit rating, making it difficult to obtain loans in the future.
+    2. Scammers can withdraw victims’ money from their bank accounts by using the PIIs.
+    3. Steal victims’ tax refund
+    4. Steal victims’ health care benefits
+    5. Commit crimes under victims’ name
+    6. Take over victims’ email accounts to commit crimes"
+
+  utter_personal_identifiable_information:
+    - text: "Personal Identifiable Information (PII) is defined as information
+    1. that directly identifies an individual (e.g., name, address, social security number or other identifying number or code, telephone number, email address, etc.)
+    2. by which an agency intends to identify specific individuals in conjunction with other data elements, i.e., indirect identification. (These data elements may include a combination of gender, race, birth date, geographic indicator, and other descriptors).
+    3. information permitting the physical or online contacting of a specific individual is the same as personally identifiable information."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

@@ -1,0 +1,5 @@
+Domain shows all the things your system knows about
+Whatever is on domain file, the system can only say those things
+
+Config file has NLU pipeline but not needed to change that
+
