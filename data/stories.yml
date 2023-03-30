@@ -9,42 +9,16 @@ stories:
   - intent: mood_great
   - action: utter_ask
 
-# - story: sad path 1
-#   steps:
-#   - intent: greet
-#   - action: utter_greet
-#   - intent: mood_unhappy
-#   - action: utter_cheer_up
-#   - action: utter_did_that_help
-#   - intent: affirm
-#   - action: utter_happy
-
-# - story: sad path 2
-#   steps:
-#   - intent: greet
-#   - action: utter_greet
-#   - intent: mood_unhappy
-#   - action: utter_cheer_up
-#   - action: utter_did_that_help
-#   - intent: deny
-#   - action: utter_goodbye
-
 - story: identity theft
   steps:
   - intent: identity_theft_about
   - action: utter_identity_theft_about
-  # - intent: affirm
-  # - action: utter_ask_more
-  # - intent: deny
   - checkpoint: ask_feedback
 
 - story: identity theft types
   steps:
   - intent: identity_theft_type
   - action: utter_identity_theft_type
-  # - intent: affirm
-  # - action: utter_ask_more
-  # - intent: deny
   - checkpoint: ask_feedback
 
 - story: give feedback
@@ -67,4 +41,10 @@ stories:
   steps:
   - intent: consequences_stolen_personal_information
   - action: utter_consequences_personal_information
+  - action: utter_ask_more
+
+- story: question about personal identifiable information
+  steps:
+  - intent: personal_identifiable_information
+  - action: utter_personal_identifiable_information
   - action: utter_ask_more
