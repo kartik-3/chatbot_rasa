@@ -51,6 +51,8 @@ nlu:
 - intent: mood_great
   examples: |
     - perfect
+    # - good
+    # - fine
     - great
     - amazing
     - feeling like a king
@@ -90,17 +92,6 @@ nlu:
     - could have been more descriptive
     - needs to be more descriptive
 
-- intent: font_size_problem
-  examples: |
-    - Too small
-    - I am unable to see
-    - Too big
-    - How can I decrease the font?
-    - How can I increase the font?
-    - I need help changing the font
-    - font size
-    - can you help me change the font size?
-
 - intent: consequences_stolen_personal_information
   examples: |
     - What are the consequences when personal information is stolen?
@@ -122,3 +113,98 @@ nlu:
     - can you explain PII?
     - I did not understand PII
     - tell me about PII again
+
+- intent: font_size_problem
+  examples: |
+    - Too small
+    - I am unable to see
+    - Too big
+    - How can I decrease the font?
+    - How can I increase the font?
+    - I need help changing the font
+    - font size
+    - can you help me change the font size?
+
+- intent: have_dark_mode
+  examples: |
+    - Do you have a dark mode?
+    - The screen is too bright, can I turn on dark mode?
+    - Is there an option for dark mode?
+    - have a dark mode
+    - have dark mode
+
+- intent: have_light_mode
+  examples: |
+    - Do you have a light mode?
+    - The screen is too dark, can I turn on light mode?
+    - Is there an option for light mode?
+    - have a light mode
+    - have light mode
+
+- intent: enable_dark_mode
+  examples: |
+    - How to turn on dark mode?
+    - How can I enable dark mode?
+    - Can you tell me how to enable dark mode?
+    - Can you tell me how to enable it?
+    - How to enable it?
+
+- intent: disable_dark_mode
+  examples: |
+    - How to turn off dark mode?
+    - How can I disable dark mode?
+    - Can you tell me how to disable dark mode?
+    - Can you tell me how to disable it?
+    - How to disable it?
+
+- intent: what_game_mode
+  examples: |
+    - what is game mode?
+    - can you explain game mode?
+    - i don't understand game mode
+    - concept of game mode
+    - tell me about game mode
+    - how does game mode work?
+    - can you tell me about game mode?
+    - i want to know about game mode
+
+- intent: turn_on_game_mode
+  examples: |
+    - how to turn on game mode?
+    - how to turn game mode on?
+    - can you tell me how to turn on game mode?
+    - i don't understand how to turn game mode on
+    - turn game mode on
+    - tell me about turning game mode on
+    - how do I turn game mode on?
+
+- intent: what_learn_mode
+  examples: |
+    - what is learn mode?
+    - can you explain learn mode?
+    - i don't understand learn mode
+    - concept of learn mode
+    - tell me about learn mode
+    - how does learn mode work?
+    - can you tell me about learn mode?
+    - i want to know about learn mode
+
+- intent: turn_on_learn_mode
+  examples: |
+    - how to turn on learn mode?
+    - how to turn learn mode on?
+    - can you tell me how to turn on learn mode?
+    - i don't understand how to turn learn mode on
+    - turn learn mode on
+    - tell me about turning learn mode on
+    - how do I turn learn mode on?
+
+- intent: learn_mode_vs_game_mode
+  examples: |
+    - What’s the difference between learn mode and game mode?
+    - how to differentiate between learn mode and game mode?
+    - can you the difference between learn mode and game mode?
+    - i don't understand the difference between learn mode and game mode?
+    - turn learn mode on
+    - tell me the difference between learn mode and game mode?
+    - how do I differentiate between learn mode and game mode?

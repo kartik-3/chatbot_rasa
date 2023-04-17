@@ -14,6 +14,15 @@ intents:
   - font_size_problem
   - consequences_stolen_personal_information
   - personal_identifiable_information
+  - have_dark_mode
+  - enable_dark_mode
+  - disable_dark_mode
+  - have_light_mode
+  - what_game_mode
+  - turn_on_game_mode
+  - what_learn_mode
+  - turn_on_learn_mode
+  - learn_mode_vs_game_mode
 
 responses:
 
@@ -36,6 +45,9 @@ responses:
   utter_ask_more:
     - text: "Anything else?"
     - text: "Can I help with anything else?"
+  
+  utter_get_feedback:
+    - text: "Would you like to give any feedback for the training module?"
 
   utter_identity_theft_about:
     - text: "Identity theft happens when someone steals your personal information to commit fraud. The identity thief may use your information to apply for credit, file taxes, or get medical services. These acts can damage your credit status and cost you time and money to restore your good name. "
@@ -45,12 +57,6 @@ responses:
   \n1. financial identity theft
   \n2. tax-related identity theft
   \n3. medical identity theft"
-  
-  utter_get_feedback:
-    - text: "Would you like to give any feedback for the training module?"
-
-  utter_change_font_size:
-    - text: "To change the font size go to Settings > System settings > Font. From there, you can select the font you like and change the size of the font as per your liking."
 
   utter_consequences_personal_information:
     - text: "Stolen Personal Identifiable Information (PII) can harm the victim in multiple ways - 
@@ -66,6 +72,36 @@ responses:
     \n1. that directly identifies an individual (e.g., name, address, social security number or other identifying number or code, telephone number, email address, etc.)
     \n2. by which an agency intends to identify specific individuals in conjunction with other data elements, i.e., indirect identification. (These data elements may include a combination of gender, race, birth date, geographic indicator, and other descriptors).
     \n3. information permitting the physical or online contacting of a specific individual is the same as personally identifiable information."
+
+  utter_change_font_size:
+    - text: "Click the “Accessibility Menu” which is located in the bottom left throughout the DART site, and select the text size you want."
+
+  utter_have_dark_mode:
+    - text: "Yes, to enable dark mode, click the “Accessibility Menu” which is located in the bottom left throughout the DART site, and click ”Dark Mode”."
+
+  utter_have_light_mode:
+    - text: "Yes, to enable light mode, click the “Accessibility Menu” which is located in the bottom left throughout the DART site, and click ”Light Mode”."
+
+  utter_enable_dark_mode:
+    - text: "Click the “Accessibility Menu” which is located in the bottom left throughout the DART site, and click ”Dark Mode”."
+
+  utter_disable_dark_mode:
+    - text: "Click the “Accessibility Menu” which is located in the bottom left throughout the DART site, and click ”Light Mode”."
+
+  utter_what_game_mode:
+    - text: "Game mode has an avatar that helps you through the learning."
+
+  utter_turn_on_game_mode:
+    - text: "Click the “Accessibility Menu” which is located in the bottom left throughout the DART site, and click ”Game Mode”."
+
+  utter_what_learn_mode:
+    - text: "Learn mode is a clear version that you can learn by yourself."
+
+  utter_turn_on_learn_mode:
+    - text: "Click the “Accessibility Menu” which is located in the bottom left throughout the DART site, and click ”Learn Mode”."
+
+  utter_learn_mode_vs_game_mode:
+    - text: "Game mode has an avatar that helps you through the learning, while learn mode is a clear version that you can learn by yourself."
 
 session_config:
   session_expiration_time: 60
