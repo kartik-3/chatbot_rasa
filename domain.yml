@@ -1,7 +1,8 @@
 version: "3.1"
 entities:
   - interaction_mode
-  - dark_theme
+  - is_dark_theme
+  - is_new_user
 
 slots:
   interaction_mode:
@@ -10,12 +11,18 @@ slots:
     mappings:
     - type: from_entity
       entity: interaction_mode
-  dark_theme:
+  is_dark_theme:
     type: text
     influence_conversation: true
     mappings:
     - type: from_entity
-      entity: dark_theme
+      entity: is_dark_theme
+  is_new_user:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: is_new_user
 
 intents:
   - greet
@@ -39,6 +46,8 @@ intents:
   - have_theme
   - enable_theme
   - learn_mode_vs_game_mode
+  - forgot_password
+  - how_to_login
 
 responses:
 
@@ -121,31 +130,77 @@ responses:
   utter_have_theme:
     - condition:
         - type: slot
-          name: dark_theme
+          name: is_dark_theme
           value: dark mode
       text: "Yes, to enable dark mode, click the “Accessibility Menu” which is located in the bottom left throughout the DART site, and click ”Dark Mode”."
 
     - condition:
         - type: slot
-          name: dark_theme
+          name: is_dark_theme
           value: light mode
       text: "Yes, to enable light mode, click the “Accessibility Menu” which is located in the bottom left throughout the DART site, and click ”Light Mode”."
 
   utter_enable_theme:
     - condition:
         - type: slot
-          name: dark_theme
+          name: is_dark_theme
           value: dark mode
       text: "Click the “Accessibility Menu” which is located in the bottom left throughout the DART site, and click ”Dark Mode”."
 
     - condition:
         - type: slot
-          name: dark_theme
+          name: is_dark_theme
           value: light mode
       text: "Click the “Accessibility Menu” which is located in the bottom left throughout the DART site, and click ”Light Mode”."
 
   utter_learn_mode_vs_game_mode:
     - text: "Game mode has an avatar that helps you through the learning, while learn mode is a clear version that you can learn by yourself."
+
+  utter_forgot_password:
+    - text: "Click “ForgotPassword?” to have your password e-mailed to you. If you experience difficulty, you may also email us at socialmediatestdrive@gmail.com."
+
+  utter_login:
+    - condition:
+        - type: slot
+          name: is_new_user
+          value: visitor
+      text: "In the login page, you can choose to login as a guest or create an account. Upon completing the registration process you will be able to login using the email and password you entered during account creation. By registration, you’re able to track and continue your learning process."
+    - condition:
+        - type: slot
+          name: is_new_user
+          value: new user
+      text: "In the login page, you can choose to login as a guest or create an account. Upon completing the registration process you will be able to login using the email and password you entered during account creation. By registration, you’re able to track and continue your learning process."
+    - condition:
+        - type: slot
+          name: is_new_user
+          value: don't have an account
+      text: "In the login page, you can choose to login as a guest or create an account. Upon completing the registration process you will be able to login using the email and password you entered during account creation. By registration, you’re able to track and continue your learning process."
+    - condition:
+        - type: slot
+          name: is_new_user
+          value: do not have an account
+      text: "In the login page, you can choose to login as a guest or create an account. Upon completing the registration process you will be able to login using the email and password you entered during account creation. By registration, you’re able to track and continue your learning process."
+
+    - condition:
+        - type: slot
+          name: is_new_user
+          value: existing user
+      text: "For return visits enter your Username and Password in the login page."
+    - condition:
+        - type: slot
+          name: is_new_user
+          value: have an account
+      text: "For return visits enter your Username and Password in the login page."
+    - condition:
+        - type: slot
+          name: is_new_user
+          value: old user
+      text: "For return visits enter your Username and Password in the login page."
+    - condition:
+        - type: slot
+          name: is_new_user
+          value: return user
+      text: "For return visits enter your Username and Password in the login page."
 
 session_config:
   session_expiration_time: 60

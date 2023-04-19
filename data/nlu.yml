@@ -163,29 +163,29 @@ nlu:
 
 - intent: have_theme
   examples: |
-    - Do you have a [dark mode](dark_theme)?
-    - The screen is too bright, can I turn on [dark mode](dark_theme)?
-    - Is there an option for [dark mode](dark_theme)?
-    - have a [dark mode](dark_theme)
-    - have [dark mode](dark_theme)
-    - Do you have a [light mode](dark_theme)?
-    - The screen is too bright, can I turn off [light mode](dark_theme)?
-    - Is there an option for [light mode](dark_theme)?
-    - have a [light mode](dark_theme)
-    - have [light mode](dark_theme)
+    - Do you have a [dark mode](is_dark_theme)?
+    - The screen is too bright, can I turn on [dark mode](is_dark_theme)?
+    - Is there an option for [dark mode](is_dark_theme)?
+    - have a [dark mode](is_dark_theme)
+    - have [dark mode](is_dark_theme)
+    - Do you have a [light mode](is_dark_theme)?
+    - The screen is too bright, can I turn off [light mode](is_dark_theme)?
+    - Is there an option for [light mode](is_dark_theme)?
+    - have a [light mode](is_dark_theme)
+    - have [light mode](is_dark_theme)
 
 - intent: enable_theme
   examples: |
-    - How to turn on [dark mode](dark_theme)?
-    - How can I enable [dark mode](dark_theme)?
-    - Can you tell me how to enable [dark mode](dark_theme)?
-    - Can you tell me how to [dark mode](dark_theme)?
-    - How to enable [dark mode](dark_theme)?
-    - How to turn off [light mode](dark_theme)?
-    - How can I disable [light mode](dark_theme)?
-    - Can you tell me how to disable [light mode](dark_theme)?
-    - Can you tell me how to disable [light mode](dark_theme)?
-    - How to disable [light mode](dark_theme)?
+    - How to turn on [dark mode](is_dark_theme)?
+    - How can I enable [dark mode](is_dark_theme)?
+    - Can you tell me how to enable [dark mode](is_dark_theme)?
+    - Can you tell me how to [dark mode](is_dark_theme)?
+    - How to enable [dark mode](is_dark_theme)?
+    - How to turn off [light mode](is_dark_theme)?
+    - How can I disable [light mode](is_dark_theme)?
+    - Can you tell me how to disable [light mode](is_dark_theme)?
+    - Can you tell me how to disable [light mode](is_dark_theme)?
+    - How to disable [light mode](is_dark_theme)?
 
 - intent: learn_mode_vs_game_mode
   examples: |
@@ -196,3 +196,38 @@ nlu:
     - turn learn mode on
     - tell me the difference between learn mode and game mode?
     - how do I differentiate between learn mode and game mode?
+
+- intent: forgot_password
+  examples: |
+    - I forgot my password. How do I obtain it?
+    - I don't remember my password.
+    - I forgot my password.
+    - Can you help me in retrieving my password.
+    - I can't remember my password.
+    - Do you know how I can retrieve my password.
+    - Can you tell me how to make a new password?
+    - Can you tell me how to generate a new password?
+    - Can you tell me how I can retrieve my new password?
+
+- intent: how_to_login
+  examples: |
+    - I’m a [visitor](is_new_user). How do I login?
+    - I am a [new user](is_new_user). How do I login?
+    - I am a [new user](is_new_user).
+    - I am a [visitor](is_new_user).
+    - I [don't have an account](is_new_user). How do I login?
+    - I [don't have an account](is_new_user). How do I login?
+    - I [do not have an account](is_new_user). How do I login?
+    - I [do not have an account](is_new_user). How do I login?
+    - I already [have an account](is_new_user). How do I login?
+    - I [have an account](is_new_user). How do I login?
+    - I am an [existing user](is_new_user). How do I login?
+    - I am an [existing user](is_new_user).
+    - I am an [old user](is_new_user).
+    - I am an [old user](is_new_user). How can I login?
+    - I am an [return user](is_new_user).
+    - I am an [return user](is_new_user). How can I login?
+    - How do I login?
+    - How can I login?
+    - How can one login?
+    - Can you guide me on how I can login?

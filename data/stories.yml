@@ -80,3 +80,30 @@ stories:
   steps:
   - intent: learn_mode_vs_game_mode
   - action: utter_learn_mode_vs_game_mode
+
+- story: user forgot password
+  steps:
+  - intent: forgot_password
+  - action: utter_forgot_password
+
+- story: how to login
+  steps:
+  - intent: how_to_login
+  - or:
+    - slot_was_set:
+      - is_new_user: visitor
+    - slot_was_set:
+      - is_new_user: new user
+    - slot_was_set:
+      - is_new_user: don't have an account
+    - slot_was_set:
+      - is_new_user: do not have an account
+    - slot_was_set:
+      - is_new_user: existing user
+    - slot_was_set:
+      - is_new_user: have an account
+    - slot_was_set:
+      - is_new_user: old user
+    - slot_was_set:
+      - is_new_user: return user
+  - action: utter_login
