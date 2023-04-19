@@ -1,4 +1,21 @@
 version: "3.1"
+entities:
+  - interaction_mode
+  - dark_theme
+
+slots:
+  interaction_mode:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: interaction_mode
+  dark_theme:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: dark_theme
 
 intents:
   - greet
@@ -18,11 +35,17 @@ intents:
   - enable_dark_mode
   - disable_dark_mode
   - have_light_mode
-  - what_game_mode
-  - turn_on_game_mode
-  - what_learn_mode
-  - turn_on_learn_mode
+  # - what_game_mode
+  # - turn_on_game_mode
+  # - what_learn_mode
+  # - turn_on_learn_mode
   - learn_mode_vs_game_mode
+  - what_interaction_mode
+  - enable_interaction_mode
+  - have_theme
+  - enable_theme
+  # - what_game_mode
+  # - what_learn_mode
 
 responses:
 
@@ -76,32 +99,97 @@ responses:
   utter_change_font_size:
     - text: "Click the “Accessibility Menu” which is located in the bottom left throughout the DART site, and select the text size you want."
 
-  utter_have_dark_mode:
-    - text: "Yes, to enable dark mode, click the “Accessibility Menu” which is located in the bottom left throughout the DART site, and click ”Dark Mode”."
+  # utter_have_dark_mode:
+  #   - text: "Yes, to enable dark mode, click the “Accessibility Menu” which is located in the bottom left throughout the DART site, and click ”Dark Mode”."
 
-  utter_have_light_mode:
-    - text: "Yes, to enable light mode, click the “Accessibility Menu” which is located in the bottom left throughout the DART site, and click ”Light Mode”."
+  # utter_have_light_mode:
+  #   - text: "Yes, to enable light mode, click the “Accessibility Menu” which is located in the bottom left throughout the DART site, and click ”Light Mode”."
 
-  utter_enable_dark_mode:
-    - text: "Click the “Accessibility Menu” which is located in the bottom left throughout the DART site, and click ”Dark Mode”."
+  # utter_enable_dark_mode:
+  #   - text: "Click the “Accessibility Menu” which is located in the bottom left throughout the DART site, and click ”Dark Mode”."
 
-  utter_disable_dark_mode:
-    - text: "Click the “Accessibility Menu” which is located in the bottom left throughout the DART site, and click ”Light Mode”."
+  # utter_disable_dark_mode:
+  #   - text: "Click the “Accessibility Menu” which is located in the bottom left throughout the DART site, and click ”Light Mode”."
 
-  utter_what_game_mode:
-    - text: "Game mode has an avatar that helps you through the learning."
+  # utter_what_game_mode:
+  #   - text: "Game mode has an avatar that helps you through the learning."
 
-  utter_turn_on_game_mode:
-    - text: "Click the “Accessibility Menu” which is located in the bottom left throughout the DART site, and click ”Game Mode”."
+  # utter_turn_on_game_mode:
+  #   - text: "Click the “Accessibility Menu” which is located in the bottom left throughout the DART site, and click ”Game Mode”."
 
-  utter_what_learn_mode:
-    - text: "Learn mode is a clear version that you can learn by yourself."
+  # utter_what_learn_mode:
+  #   - text: "Learn mode is a clear version that you can learn by yourself."
 
-  utter_turn_on_learn_mode:
-    - text: "Click the “Accessibility Menu” which is located in the bottom left throughout the DART site, and click ”Learn Mode”."
+  # utter_turn_on_learn_mode:
+  #   - text: "Click the “Accessibility Menu” which is located in the bottom left throughout the DART site, and click ”Learn Mode”."
+
+  # utter_what_interaction_mode:
+  #   - condition:
+  #       - type: slot
+  #         name: interaction_mode
+  #         value: learn_mode
+  #     text: "Learn mode is a clear version that you can learn by yourself."
+
+  #   - condition:
+  #       - type: slot
+  #         name: interaction_mode
+  #         value: game_mode
+  #     text: "Game mode has an avatar that helps you through the learning."
 
   utter_learn_mode_vs_game_mode:
     - text: "Game mode has an avatar that helps you through the learning, while learn mode is a clear version that you can learn by yourself."
+
+  utter_what_interaction_mode:
+    - condition:
+        - type: slot
+          name: interaction_mode
+          value: learn mode
+      text: "Learn mode is a clear version that you can learn by yourself."
+
+    - condition:
+        - type: slot
+          name: interaction_mode
+          value: game mode
+      text: "Game mode has an avatar that helps you through the learning."
+
+  utter_enable_interaction_mode:
+    - condition:
+        - type: slot
+          name: interaction_mode
+          value: learn mode
+      text: "Click the “Accessibility Menu” which is located in the bottom left throughout the DART site, and click ”Learn Mode”."
+
+    - condition:
+        - type: slot
+          name: interaction_mode
+          value: game mode
+      text: "Click the “Accessibility Menu” which is located in the bottom left throughout the DART site, and click ”Game Mode”."
+
+  utter_have_theme:
+    - condition:
+        - type: slot
+          name: dark_theme
+          value: dark mode
+      text: "Yes, to enable dark mode, click the “Accessibility Menu” which is located in the bottom left throughout the DART site, and click ”Dark Mode”."
+
+    - condition:
+        - type: slot
+          name: dark_theme
+          value: light mode
+      text: "Yes, to enable light mode, click the “Accessibility Menu” which is located in the bottom left throughout the DART site, and click ”Light Mode”."
+
+  utter_enable_theme:
+    - condition:
+        - type: slot
+          name: dark_theme
+          value: dark mode
+      text: "Click the “Accessibility Menu” which is located in the bottom left throughout the DART site, and click ”Dark Mode”."
+
+    - condition:
+        - type: slot
+          name: dark_theme
+          value: light mode
+      text: "Click the “Accessibility Menu” which is located in the bottom left throughout the DART site, and click ”Light Mode”."
 
 session_config:
   session_expiration_time: 60

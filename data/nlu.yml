@@ -125,79 +125,37 @@ nlu:
     - font size
     - can you help me change the font size?
 
-- intent: have_dark_mode
-  examples: |
-    - Do you have a dark mode?
-    - The screen is too bright, can I turn on dark mode?
-    - Is there an option for dark mode?
-    - have a dark mode
-    - have dark mode
+# - intent: have_dark_mode
+#   examples: |
+#     - Do you have a dark mode?
+#     - The screen is too bright, can I turn on dark mode?
+#     - Is there an option for dark mode?
+#     - have a dark mode
+#     - have dark mode
 
-- intent: have_light_mode
-  examples: |
-    - Do you have a light mode?
-    - The screen is too dark, can I turn on light mode?
-    - Is there an option for light mode?
-    - have a light mode
-    - have light mode
+# - intent: have_light_mode
+#   examples: |
+#     - Do you have a light mode?
+#     - The screen is too dark, can I turn on light mode?
+#     - Is there an option for light mode?
+#     - have a light mode
+#     - have light mode
 
-- intent: enable_dark_mode
-  examples: |
-    - How to turn on dark mode?
-    - How can I enable dark mode?
-    - Can you tell me how to enable dark mode?
-    - Can you tell me how to enable it?
-    - How to enable it?
+# - intent: enable_dark_mode
+#   examples: |
+#     - How to turn on dark mode?
+#     - How can I enable dark mode?
+#     - Can you tell me how to enable dark mode?
+#     - Can you tell me how to enable it?
+#     - How to enable it?
 
-- intent: disable_dark_mode
-  examples: |
-    - How to turn off dark mode?
-    - How can I disable dark mode?
-    - Can you tell me how to disable dark mode?
-    - Can you tell me how to disable it?
-    - How to disable it?
-
-- intent: what_game_mode
-  examples: |
-    - what is game mode?
-    - can you explain game mode?
-    - i don't understand game mode
-    - concept of game mode
-    - tell me about game mode
-    - how does game mode work?
-    - can you tell me about game mode?
-    - i want to know about game mode
-
-- intent: turn_on_game_mode
-  examples: |
-    - how to turn on game mode?
-    - how to turn game mode on?
-    - can you tell me how to turn on game mode?
-    - i don't understand how to turn game mode on
-    - turn game mode on
-    - tell me about turning game mode on
-    - how do I turn game mode on?
-
-- intent: what_learn_mode
-  examples: |
-    - what is learn mode?
-    - can you explain learn mode?
-    - i don't understand learn mode
-    - concept of learn mode
-    - tell me about learn mode
-    - how does learn mode work?
-    - can you tell me about learn mode?
-    - i want to know about learn mode
-
-- intent: turn_on_learn_mode
-  examples: |
-    - how to turn on learn mode?
-    - how to turn learn mode on?
-    - can you tell me how to turn on learn mode?
-    - i don't understand how to turn learn mode on
-    - turn learn mode on
-    - tell me about turning learn mode on
-    - how do I turn learn mode on?
+# - intent: disable_dark_mode
+#   examples: |
+#     - How to turn off dark mode?
+#     - How can I disable dark mode?
+#     - Can you tell me how to disable dark mode?
+#     - Can you tell me how to disable it?
+#     - How to disable it?
 
 - intent: learn_mode_vs_game_mode
   examples: |
@@ -208,3 +166,170 @@ nlu:
     - turn learn mode on
     - tell me the difference between learn mode and game mode?
     - how do I differentiate between learn mode and game mode?
+
+- intent: what_interaction_mode
+  examples: |
+    - what is [game mode](interaction_mode)?
+    - can you explain [game mode](interaction_mode)?
+    - i don't understand [game mode](interaction_mode)
+    - concept of [game mode](interaction_mode)
+    - tell me about [game mode](interaction_mode)
+    - how does [game mode](interaction_mode) work?
+    - can you tell me about [game mode](interaction_mode)?
+    - i want to know about [game mode](interaction_mode)
+    - what is [learn mode](interaction_mode)?
+    - can you explain [learn mode](interaction_mode)?
+    - i don't understand [learn mode](interaction_mode)
+    - concept of [learn mode](interaction_mode)
+    - tell me about [learn mode](interaction_mode)
+    - how does [learn mode](interaction_mode) work?
+    - can you tell me about [learn mode](interaction_mode)?
+    - i want to know about [learn mode](interaction_mode)
+
+- intent: enable_interaction_mode
+  examples: |
+    - how to turn on [game mode](interaction_mode)?
+    - how to turn [game mode](interaction_mode) on?
+    - can you tell me how to turn on [game mode](interaction_mode)?
+    - i don't understand how to turn [game mode](interaction_mode) on
+    - turn [game mode](interaction_mode) on
+    - tell me about turning [game mode](interaction_mode) on
+    - how do I turn [game mode](interaction_mode) on?
+    - how to turn on [learn mode](interaction_mode)?
+    - how to turn [learn mode](interaction_mode) on?
+    - can you tell me how to turn on [learn mode](interaction_mode)?
+    - i don't understand how to turn [learn mode](interaction_mode) on
+    - turn [learn mode](interaction_mode) on
+    - tell me about turning [learn mode](interaction_mode) on
+    - how do I turn [learn mode](interaction_mode) on?
+
+- intent: have_theme
+  examples: |
+    - Do you have a [dark mode](dark_theme)?
+    - The screen is too bright, can I turn on [dark mode](dark_theme)?
+    - Is there an option for [dark mode](dark_theme)?
+    - have a [dark mode](dark_theme)
+    - have [dark mode](dark_theme)
+    - Do you have a [light mode](dark_theme)?
+    - The screen is too bright, can I turn off [light mode](dark_theme)?
+    - Is there an option for [light mode](dark_theme)?
+    - have a [light mode](dark_theme)
+    - have [light mode](dark_theme)
+
+- intent: enable_theme
+  examples: |
+    - How to turn on [dark mode](dark_theme)?
+    - How can I enable [dark mode](dark_theme)?
+    - Can you tell me how to enable [dark mode](dark_theme)?
+    - Can you tell me how to [dark mode](dark_theme)?
+    - How to enable [dark mode](dark_theme)?
+    - How to turn off [light mode](dark_theme)?
+    - How can I disable [light mode](dark_theme)?
+    - Can you tell me how to disable [light mode](dark_theme)?
+    - Can you tell me how to disable [light mode](dark_theme)?
+    - How to disable [light mode](dark_theme)?
+# - intent: have_light_mode
+#   examples: |
+#     - Do you have a light mode?
+#     - The screen is too dark, can I turn on light mode?
+#     - Is there an option for light mode?
+#     - have a light mode
+#     - have light mode
+
+
+# - intent: what_interaction_mode
+#   examples: |
+#     - what is [game_mode](interaction_mode)?
+#     - can you explain [game_mode](interaction_mode)?
+#     - i don't understand [game_mode](interaction_mode)
+#     - concept of [game_mode](interaction_mode)
+#     - tell me about [game_mode](interaction_mode)
+#     - how does [game_mode](interaction_mode) work?
+#     - can you tell me about [game_mode](interaction_mode)?
+#     - i want to know about [game_mode](interaction_mode)
+#     - what is [learn_mode](interaction_mode)?
+#     - can you explain [learn_mode](interaction_mode)?
+#     - i don't understand [learn_mode](interaction_mode)
+#     - concept of [learn_mode](interaction_mode)
+#     - tell me about [learn_mode](interaction_mode)
+#     - how does [learn_mode](interaction_mode) work?
+#     - can you tell me about [learn_mode](interaction_mode)?
+#     - i want to know about [learn_mode](interaction_mode)
+
+# - intent: what_game_mode
+#   examples: |
+#     - what is [game mode](game_mode)?
+#     - can you explain [game mode](interaction_mode)?
+#     - i don't understand [game mode](interaction_mode)
+#     - concept of [game mode](interaction_mode)
+#     - tell me about [game mode](interaction_mode)
+#     - how does [game mode](interaction_mode) work?
+#     - can you tell me about [game mode](interaction_mode)?
+#     - i want to know about [game mode](interaction_mode)
+#   # - what is [learn mode](interaction_mode)?
+# - intent: what_learn_mode
+#   examples: |
+#     - what is [learn mode](learn_mode)?
+#     - can you explain [learn mode](learn_mode)?
+#     - i don't understand [learn mode](learn_mode)
+#     - concept of [learn mode](learn_mode)
+#     - tell me about [learn mode](learn_mode)
+#     - how does [learn mode](learn_mode) work?
+#     - can you tell me about [learn mode](learn_mode)?
+#     - i want to know about [learn mode](learn_mode)
+# - what is [game mode](interaction_mode)?
+  # - what is [learn mode](interaction_mode)?
+
+
+# - intent: turn_on_game_mode
+#   examples: |
+#     - how to turn on game mode?
+#     - how to turn game mode on?
+#     - can you tell me how to turn on game mode?
+#     - i don't understand how to turn game mode on
+#     - turn game mode on
+#     - tell me about turning game mode on
+#     - how do I turn game mode on?
+
+
+# - intent: what_game_mode
+#   examples: |
+#     - what is game mode?
+#     - can you explain game mode?
+#     - i don't understand game mode
+#     - concept of game mode
+#     - tell me about game mode
+#     - how does game mode work?
+#     - can you tell me about game mode?
+#     - i want to know about game mode
+
+# - intent: turn_on_game_mode
+#   examples: |
+#     - how to turn on game mode?
+#     - how to turn game mode on?
+#     - can you tell me how to turn on game mode?
+#     - i don't understand how to turn game mode on
+#     - turn game mode on
+#     - tell me about turning game mode on
+#     - how do I turn game mode on?
+
+# - intent: what_learn_mode
+#   examples: |
+#     - what is learn mode?
+#     - can you explain learn mode?
+#     - i don't understand learn mode
+#     - concept of learn mode
+#     - tell me about learn mode
+#     - how does learn mode work?
+#     - can you tell me about learn mode?
+#     - i want to know about learn mode
+
+# - intent: turn_on_learn_mode
+#   examples: |
+#     - how to turn on learn mode?
+#     - how to turn learn mode on?
+#     - can you tell me how to turn on learn mode?
+#     - i don't understand how to turn learn mode on
+#     - turn learn mode on
+#     - tell me about turning learn mode on
+#     - how do I turn learn mode on?
