@@ -35,102 +35,16 @@ stories:
   steps:
   - intent: font_size_problem
   - action: utter_change_font_size
-  # - action: utter_ask_more
 
 - story: question about personal information stolen
   steps:
   - intent: consequences_stolen_personal_information
   - action: utter_consequences_personal_information
-  # - action: utter_ask_more
 
 - story: question about personal identifiable information
   steps:
   - intent: personal_identifiable_information
   - action: utter_personal_identifiable_information
-  # - action: utter_ask_more
-
-# - story: dark mode
-#   steps:
-#   - intent: have_dark_mode
-#   - action: utter_have_dark_mode
-#   # - checkpoint: ask_dark_mode
-
-# - story: light mode
-#   steps:
-#   - intent: have_light_mode
-#   - action: utter_have_light_mode
-
-# - story: enable dark mode
-#   steps:
-#   - intent: enable_dark_mode
-#   - action: utter_enable_dark_mode
-
-# - story: disable dark mode
-#   steps:
-#   - intent: disable_dark_mode
-#   - action: utter_disable_dark_mode
-
-# - story: what game mode
-#   steps:
-#   - intent: what_game_mode
-#   - action: utter_what_game_mode
-#   # - checkpoint: ask_game_mode
-
-# - story: turn on game mode
-#   steps:
-#   # - checkpoint: ask_game_mode
-#   - intent: turn_on_game_mode
-#   - action: utter_turn_on_game_mode
-#   # - action: utter_ask_more
-
-# - story: what learn mode
-#   steps:
-#   - intent: what_learn_mode
-#   - action: utter_what_learn_mode
-#   # - checkpoint: ask_learn_mode
-
-# - story: turn on learn mode
-#   steps:
-#   # - checkpoint: ask_learn_mode
-#   - intent: turn_on_learn_mode
-#   - action: utter_turn_on_learn_mode
-#   # - action: utter_ask_more
-
-- story: learn mode vs game mode
-  steps:
-  - intent: learn_mode_vs_game_mode
-  - action: utter_learn_mode_vs_game_mode
-  # - action: utter_ask_more
-
-# - story: what learn mode
-#   steps:
-#   - intent: what_interaction_mode
-#   - slot_was_set:
-#     - interaction_mode: learn mode
-#     # entities:
-#     #   - interaction_mode: learn mode
-#   - action: utter_what_learn_mode
-
-# - story: what game mode
-#   steps:
-#   - intent: what_interaction_mode
-#   - slot_was_set:
-#     - interaction_mode: game mode
-#     # entities:
-#     #   - interaction_mode: game mode
-#   - action: utter_what_game_mode
-
-# - story: what interaction mode
-#   steps:
-#   - intent: what_interaction_mode
-#   - or:
-#     - slot_was_set:
-#       - interaction_mode: game_mode
-#     - slot_was_set:
-#       - interaction_mode: learn_mode
-      # entities:
-      #   - interaction_mode: game mode
-  # - action: utter_what_interaction_mode
 
 - story: what interaction mode
   steps:
@@ -161,3 +75,8 @@ stories:
   steps:
   - intent: enable_theme
   - action: utter_enable_theme
+
+- story: learn mode vs game mode
+  steps:
+  - intent: learn_mode_vs_game_mode
+  - action: utter_learn_mode_vs_game_mode
