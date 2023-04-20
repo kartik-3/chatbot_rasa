@@ -19,8 +19,6 @@ nlu:
 
 - intent: goodbye
   examples: |
-    - good by
-    - cee you later
     - good night
     - bye
     - goodbye
@@ -51,16 +49,14 @@ nlu:
 - intent: mood_great
   examples: |
     - perfect
-    # - good
-    # - fine
+    - good
+    - fine
     - great
     - amazing
-    - feeling like a king
     - wonderful
     - I am feeling very good
     - I am great
     - I am amazing
-    - I am going to save the world
     - super stoked
     - extremely good
     - so so perfect
@@ -71,6 +67,15 @@ nlu:
   examples: |
     - are you a bot?
     - are you a human?
+
+- intent: out_of_scope
+  examples: |
+    - I want to order food
+    - What is 2 + 2?
+    - Who's the US President?
+    - I like to dance
+    - I like food
+    - Where can I order food from?
 
 - intent: identity_theft_about
   examples: |
