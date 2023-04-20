@@ -39,6 +39,13 @@ stories:
 - story: question about personal information stolen
   steps:
   - intent: consequences_stolen_personal_information
+  - or:
+    - slot_was_set:
+      - interaction_mode: personal information
+    - slot_was_set:
+      - interaction_mode: pii
+    - slot_was_set:
+      - interaction_mode: personal identifiable information
   - action: utter_consequences_personal_information
 
 - story: question about personal identifiable information

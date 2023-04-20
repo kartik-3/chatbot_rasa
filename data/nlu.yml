@@ -35,6 +35,7 @@ nlu:
     - of course
     - that sounds good
     - correct
+    - thank you
 
 - intent: deny
   examples: |
@@ -99,35 +100,37 @@ nlu:
 
 - intent: consequences_stolen_personal_information
   examples: |
-    - What are the consequences when personal information is stolen?
-    - Can you tell me about potential consquences of personal information being stolen?
-    - what can be the outcome of personal information being stolen?
-    - how can stolen PII harm me?
-    - What are the consequences when PII is stolen?
-    - Can you tell me about potential consquences of PII being stolen?
-    - what can be the outcome of PII being stolen?
-    - how can stolen PII harm me?
+    - What are the consequences when [personal information](educational_topic) is stolen?
+    - Can you tell me about potential consquences of [personal information](educational_topic) being stolen?
+    - what can be the outcome of [personal information](educational_topic) being stolen?
+    - how can stolen [personal information](educational_topic) harm me?
+    - What are the consequences when [PII](educational_topic) is stolen?
+    - Can you tell me about potential consquences of [PII](educational_topic) being stolen?
+    - what can be the outcome of [PII](educational_topic) being stolen?
+    - how can stolen [PII](educational_topic) harm me?
 
 - intent: personal_identifiable_information
   examples: |
-    - what is personal identifiable information?
-    - can you explain personal identifiable information?
-    - I did not understand personal identifiable information
-    - tell me about personal identifiable information again
-    - what is PII?
-    - can you explain PII?
-    - I did not understand PII
-    - tell me about PII again
+    - what is [personal identifiable information](educational_topic)?
+    - can you explain [personal identifiable information](educational_topic)?
+    - I did not understand [personal identifiable information](educational_topic)
+    - tell me about [personal identifiable information][educational_topic] again
+    - what is [PII](educational_topic)?
+    - can you explain [PII](educational_topic)?
+    - I did not understand [PII](educational_topic)
+    - tell me about [PII](educational_topic) again
+    - i want to know about [PII](educational_topic)
+    - i want to know about [personal identifiable information](educational_topic)
 
 - intent: font_size_problem
   examples: |
-    - Too small
-    - I am unable to see
-    - Too big
+    - I am unable to see the characters on the screen
     - How can I decrease the font?
     - How can I increase the font?
     - I need help changing the font
-    - font size
+    - font size change
+    - the font is too small
+    - the font is too big
     - can you help me change the font size?
 
 - intent: what_interaction_mode
@@ -178,6 +181,16 @@ nlu:
     - Is there an option for [light mode](is_dark_theme)?
     - have a [light mode](is_dark_theme)
     - have [light mode](is_dark_theme)
+    - Do you have a [dark theme](is_dark_theme)?
+    - The screen is too bright, can I turn on [dark theme](is_dark_theme)?
+    - Is there an option for [dark theme](is_dark_theme)?
+    - have a [dark theme](is_dark_theme)
+    - have [dark theme](is_dark_theme)
+    - Do you have a [light theme](is_dark_theme)?
+    - The screen is too bright, can I turn off [light theme](is_dark_theme)?
+    - Is there an option for [light theme](is_dark_theme)?
+    - have a [light theme](is_dark_theme)
+    - have [light theme](is_dark_theme)
 
 - intent: enable_theme
   examples: |
@@ -191,6 +204,16 @@ nlu:
     - Can you tell me how to disable [light mode](is_dark_theme)?
     - Can you tell me how to disable [light mode](is_dark_theme)?
     - How to disable [light mode](is_dark_theme)?
+    - How to turn on [dark theme](is_dark_theme)?
+    - How can I enable [dark theme](is_dark_theme)?
+    - Can you tell me how to enable [dark theme](is_dark_theme)?
+    - Can you tell me how to [dark theme](is_dark_theme)?
+    - How to enable [dark theme](is_dark_theme)?
+    - How to turn off [light theme](is_dark_theme)?
+    - How can I disable [light theme](is_dark_theme)?
+    - Can you tell me how to disable [light theme](is_dark_theme)?
+    - Can you tell me how to disable [light theme](is_dark_theme)?
+    - How to disable [light theme](is_dark_theme)?
 
 - intent: learn_mode_vs_game_mode
   examples: |
@@ -218,6 +241,8 @@ nlu:
   examples: |
     - I’m a [visitor](is_new_user). How do I login?
     - I am a [new user](is_new_user). How do I login?
+    - I’m a [visitor](is_new_user). How can I login?
+    - I am a [new user](is_new_user). How can I login?
     - I am a [new user](is_new_user).
     - I am a [visitor](is_new_user).
     - I [don't have an account](is_new_user). How do I login?
@@ -225,12 +250,21 @@ nlu:
     - I [do not have an account](is_new_user). How do I login?
     - I [do not have an account](is_new_user). How do I login?
     - I already [have an account](is_new_user). How do I login?
+    - I [don't have an account](is_new_user). How can I login?
+    - I [don't have an account](is_new_user). How can I login?
+    - I [do not have an account](is_new_user). How can I login?
+    - I [do not have an account](is_new_user). How can I login?
+    - I already [have an account](is_new_user). How can I login?
     - I [have an account](is_new_user). How do I login?
     - I am an [existing user](is_new_user). How do I login?
+    - I [have an account](is_new_user). How can I login?
+    - I am an [existing user](is_new_user). How can I login?
     - I am an [existing user](is_new_user).
     - I am an [old user](is_new_user).
-    - I am an [old user](is_new_user). How can I login?
+    - I am an [old user](is_new_user). How do I login?
+    - I am an [old user](is_new_user). How do I login?
     - I am an [return user](is_new_user).
+    - I am an [return user](is_new_user). How can I login?
     - I am an [return user](is_new_user). How can I login?
     - How do I login?
     - How can I login?
