@@ -246,13 +246,9 @@ nlu:
     - I am a [new user](is_new_user).
     - I am a [visitor](is_new_user).
     - I [don't have an account](is_new_user). How do I login?
-    - I [don't have an account](is_new_user). How do I login?
-    - I [do not have an account](is_new_user). How do I login?
     - I [do not have an account](is_new_user). How do I login?
     - I already [have an account](is_new_user). How do I login?
     - I [don't have an account](is_new_user). How can I login?
-    - I [don't have an account](is_new_user). How can I login?
-    - I [do not have an account](is_new_user). How can I login?
     - I [do not have an account](is_new_user). How can I login?
     - I already [have an account](is_new_user). How can I login?
     - I [have an account](is_new_user). How do I login?
@@ -262,10 +258,10 @@ nlu:
     - I am an [existing user](is_new_user).
     - I am an [old user](is_new_user).
     - I am an [old user](is_new_user). How do I login?
-    - I am an [old user](is_new_user). How do I login?
-    - I am an [return user](is_new_user).
-    - I am an [return user](is_new_user). How can I login?
-    - I am an [return user](is_new_user). How can I login?
+    - I am an [old user](is_new_user). How can I login?
+    - I am a [return user](is_new_user).
+    - I am a [return user](is_new_user). How do I login?
+    - I am a [return user](is_new_user). How can I login?
     - How do I login?
     - How can I login?
     - How can one login?
